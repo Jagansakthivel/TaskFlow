@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Light Theme (Reference Design Default) */
+    --bg-canvas: #ffffff;
+    --bg-surface-muted: #f4f6fa;
+    --bg-surface-subtle: #f8fafc;
+    --bg-card: #ffffff;
+    --border-hairline: #e5e7eb;
+    --border-column: #edf0f7;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --text-muted: #6b7280;
+    --brand-primary: #2563eb;
+    --brand-soft: #eff6ff;
+
+    /* Status Pill Colors */
+    --status-todo: #111827;
+    --status-progress: #2563eb;
+    --status-completed: #14857b;
+    --status-overdue: #dc2626;
+  }
+
+  .dark {
+    --bg-canvas: #0f172a;
+    --bg-surface-muted: #131c31;
+    --bg-surface-subtle: #1e293b;
+    --bg-card: #1e293b;
+    --border-hairline: #334155;
+    --border-column: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #94a3b8;
+    --brand-primary: #3b82f6;
+    --brand-soft: rgba(59, 130, 246, 0.15);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle column scrollbar matching reference screenshot */
+.kanban-scroll::-webkit-scrollbar {
+  width: 4px;
+  height: 6px;
+}
+
+.kanban-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.kanban-scroll::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.35);
+  border-radius: 9999px;
+}
+
+.kanban-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.55);
+}
